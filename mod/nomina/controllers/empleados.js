@@ -50,14 +50,15 @@ app.put("/:id", (req, res) => {
 app.delete("/:id", (req, res) => {
   const { id } = req.params;
 
-  var listaTmp = [];
-  lista.map((elemento, key) => {
+  // var listaTmp = [];
+  lista = lista.filter((elemento, key) => {
     if (key != id) {
-      listaTmp.push(elemento);
+      // listaTmp.push(elemento);
+      return elemento;
     }
   });
 
-  lista = listaTmp;
+  // lista = listaTmp;
 
   res.json({
     ok: true,

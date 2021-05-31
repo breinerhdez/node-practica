@@ -1,7 +1,6 @@
 const express = require("express");
 const app = express();
 
-app.use("/empleados", require("./nomina/controllers/empleados"));
-app.use("/areas", require("./nomina/controllers/areas"));
+app.use("/nomina", require("./nomina/router"));
 
 module.exports = app;

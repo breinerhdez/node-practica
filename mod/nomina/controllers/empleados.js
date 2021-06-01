@@ -5,14 +5,6 @@ var lista = ["Diana", "Sofia"];
 
 const saludar = (nombre) => `Hola, ${nombre}`;
 
-// app.get("/", (req, res) => {
-//   res.json({
-//     ok: true,
-//     msg: `Lista de empleados.`,
-//     data: lista,
-//   });
-// });
-
 app.get("/", function (req, res) {
   const [diana, sofia] = lista;
   console.log(diana, sofia);
@@ -50,15 +42,11 @@ app.put("/:id", (req, res) => {
 app.delete("/:id", (req, res) => {
   const { id } = req.params;
 
-  // var listaTmp = [];
   lista = lista.filter((elemento, key) => {
     if (key != id) {
-      // listaTmp.push(elemento);
       return elemento;
     }
   });
-
-  // lista = listaTmp;
 
   res.json({
     ok: true,

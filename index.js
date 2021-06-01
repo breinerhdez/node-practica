@@ -8,10 +8,6 @@ app.use(express.json());
 
 app.use(require("./mod/router"));
 
-// app.listen(4500, () => {
-//   console.log("Server running on port 4500");
-// });
-
-app.listen(4500, function () {
+app.listen(4500, () => {
   console.log("Server running on port 4500");
 });
